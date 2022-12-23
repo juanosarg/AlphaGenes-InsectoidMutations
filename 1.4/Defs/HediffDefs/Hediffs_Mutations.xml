@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<HediffDef>
+		<defName>AG_VFEI_InsectoidLeg</defName>
+		<label>insectoid leg</label>
+		<labelNoun>an insectoid leg</labelNoun>
+		<description>A jointed appendage of an insectoid, consisting of several chitin covered segments. Whilst it’s an extremely painful mutation, this leg has much higher resistance to damage.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<painOffset>0.0125</painOffset>
+				<statOffsets>
+					<MaxHitPoints>30</MaxHitPoints>
+				</statOffsets>
+			</li>
+		</stages>
+		<comps>
+			<li Class="VFEI.Comps.VariableHealthComp.VFEI_HediffCompProperties_HealthModifier">
+				<healthPointToAdd>30</healthPointToAdd>
+			</li>
+		</comps>
+	</HediffDef>
+	<HediffDef>
+		<defName>AG_VFEI_InsectoidArm</defName>
+		<label>insectoid arm</label>
+		<labelNoun>an insectoid arm</labelNoun>
+		<description>A jointed appendage of an insectoid, consisting of several chitin covered segments. Whilst it’s an extremely painful mutation, this arm has much higher resistance to damage.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<painOffset>0.0125</painOffset>
+				<statOffsets>
+					<MaxHitPoints>30</MaxHitPoints>
+				</statOffsets>
+			</li>
+		</stages>
+		<comps>
+			<li Class="VFEI.Comps.VariableHealthComp.VFEI_HediffCompProperties_HealthModifier">
+				<healthPointToAdd>30</healthPointToAdd>
+			</li>
+		</comps>
+	</HediffDef>
+	<HediffDef>
+		<defName>AG_VFEI_SegmentedEye</defName>
+		<label>compound eye</label>
+		<labelNoun>a compound eye</labelNoun>
+		<description>An eye consisting of thousands of individual photoreceptor units, compound eyes have a large field of view and help with detecting fast movement, however its visibility range is significantly reduced. Whilst it’s an extremely painful mutation, this eye has a higher resistance to damage.</description>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<hediffClass>HediffWithComps</hediffClass>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>0.5</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<painOffset>0.00625</painOffset>
+				<statOffsets>
+					<MaxHitPoints>6</MaxHitPoints>
+					<MeleeDodgeChance>0.2</MeleeDodgeChance>
+				</statOffsets>
+			</li>
+		</stages>
+		<comps>
+			<li Class="VFEI.Comps.VariableHealthComp.VFEI_HediffCompProperties_HealthModifier">
+				<healthPointToAdd>6</healthPointToAdd>
+			</li>
+		</comps>
+	</HediffDef>
+	<HediffDef>
+		<defName>AG_VFEI_Mandibles</defName>
+		<label>mandibles</label>
+		<labelNoun>mandible</labelNoun>
+		<description>A pair of appendages situated on the sides of the mouth, Helping to crush and cut the food. Whilst it’s significantly less comfortable than normal jaw, insectoid mandibles significantly increase eating speed.</description>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<hediffClass>HediffWithComps</hediffClass>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1</partEfficiency>
+		</addedPartProps>
+		<stages>
+			<li>
+				<painOffset>0.0125</painOffset>
+				<statOffsets>
+					<MaxHitPoints>4</MaxHitPoints>
+					<EatingSpeed>1.5</EatingSpeed>
+				</statOffsets>
+			</li>
+		</stages>
+		<comps>
+			<li Class="VFEI.Comps.VariableHealthComp.VFEI_HediffCompProperties_HealthModifier">
+				<healthPointToAdd>4</healthPointToAdd>
+			</li>
+		</comps>
+	</HediffDef>
+</Defs>

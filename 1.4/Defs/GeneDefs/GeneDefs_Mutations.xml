@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<GeneDef>
+		<defName>AG_VFEI_InsectoidLeg</defName>
+		<label>insectoid legs</label>
+		<description>Carriers of this gene have the jointed legs of an insectoid, consisting of several chitin covered segments. Whilst it’s an extremely painful mutation, these legs have much higher resistance to damage.</description>
+		<iconPath>UI/Icons/Genes/AGI_InsectoidLeg</iconPath>
+		<biostatCpx>1</biostatCpx>
+		<displayCategory>AG_InsectoidMutations</displayCategory>
+		<biostatMet>-1</biostatMet>
+		<selectionWeight>0</selectionWeight>
+		<customEffectDescriptions>
+			<li>Implantation of a Drone genome on this person that would result in an insectoid leg will just fail.</li>
+		</customEffectDescriptions>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/AG_EndogenesInsect</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/AG_XenogenesInsect</backgroundPathXenogenes>
+				<hediffsToBodyParts>
+					<li>
+						<hediff>AG_VFEI_InsectoidLeg</hediff>
+						<bodyparts>
+							<li>Leg</li>
+							<li>Leg</li>
+						</bodyparts>
+					</li>
+				</hediffsToBodyParts>
+			</li>
+		</modExtensions>
+	</GeneDef>
+	<GeneDef>
+		<defName>AG_VFEI_InsectoidArm</defName>
+		<label>insectoid arms</label>
+		<description>Carriers of this gene have the jointed arms of an insectoid, consisting of several chitin covered segments. Whilst it’s an extremely painful mutation, these arms have much higher resistance to damage.</description>
+		<iconPath>UI/Icons/Genes/AGI_InsectoidArm</iconPath>
+		<biostatCpx>1</biostatCpx>
+		<displayCategory>AG_InsectoidMutations</displayCategory>
+		<biostatMet>-1</biostatMet>
+		<selectionWeight>0</selectionWeight>
+		<customEffectDescriptions>
+			<li>Implantation of a Drone genome on this person that would result in an insectoid arm will just fail.</li>
+		</customEffectDescriptions>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/AG_EndogenesInsect</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/AG_XenogenesInsect</backgroundPathXenogenes>
+				<hediffsToBodyParts>
+					<li>
+						<hediff>AG_VFEI_InsectoidArm</hediff>
+						<bodyparts>
+							<li>Arm</li>
+							<li>Arm</li>
+						</bodyparts>
+					</li>
+				</hediffsToBodyParts>
+			</li>
+		</modExtensions>
+	</GeneDef>
+	<GeneDef>
+		<defName>AG_VFEI_SegmentedEyes</defName>
+		<label>compound eyes</label>
+		<iconPath>UI/Icons/Genes/AG_SegmentedEye</iconPath>
+		<description>Carriers of this gene have compound eyes, consisting of thousands of individual photoreceptor units. These eyes have a large field of view and help with detecting fast movement, however their visibility range is significantly reduced. Whilst it’s an extremely painful mutation, this eye has a higher resistance to damage.</description>
+		<displayCategory>AG_InsectoidMutations</displayCategory>
+		<displayOrderInCategory>51</displayOrderInCategory>
+		<biostatMet>-1</biostatMet>
+		<biostatCpx>1</biostatCpx>
+		<selectionWeight>0</selectionWeight>
+		<exclusionTags>
+			<li>ShootingAccuracy</li>
+			<li>EyeColor</li>
+		</exclusionTags>
+		<customEffectDescriptions>
+			<li>Implantation of a Drone genome on this person that would result in an insectoid eye will just fail.</li>
+		</customEffectDescriptions>
+		<graphicData>
+			<drawScale>0.28</drawScale>
+			<graphicPath>Things/Pawn/Humanlike/HeadAttachments/AG_SegmentedEye/AG_SegmentedEye</graphicPath>
+			<graphicPathFemale>Things/Pawn/Humanlike/HeadAttachments/AG_SegmentedEye/AG_SegmentedEye</graphicPathFemale>
+			<color>(255, 255, 255)</color>
+			<visibleNorth>false</visibleNorth>
+			<drawOnEyes>true</drawOnEyes>
+			<layer>PostTattoo</layer>
+		</graphicData>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/AG_EndogenesInsect</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/AG_XenogenesInsect</backgroundPathXenogenes>
+				<hediffsToBodyParts>
+					<li>
+						<hediff>AG_VFEI_SegmentedEye</hediff>
+						<bodyparts>
+							<li>Eye</li>
+							<li>Eye</li>
+						</bodyparts>
+					</li>
+				</hediffsToBodyParts>
+			</li>
+		</modExtensions>
+	</GeneDef>
+	<GeneDef>
+		<defName>AG_InsectoidMandibles</defName>
+		<label>insectoid mandibles</label>
+		<displayCategory>AG_InsectoidMutations</displayCategory>
+		<biostatMet>-1</biostatMet>
+		<biostatCpx>1</biostatCpx>
+		<endogeneCategory>Headbone</endogeneCategory>
+		<displayOrderInCategory>110</displayOrderInCategory>
+		<exclusionTags>
+			<li>Tusk</li>
+			<li>Tusks</li>
+			<li>AG_Tusks</li>
+		</exclusionTags>
+		
+		<randomChosen>true</randomChosen>
+		<description>Carriers of this gene sport a pair of appendages situated on the sides of the mouth, helping to crush and cut the food. Whilst it’s significantly less comfortable than normal jaw, insectoid mandibles significantly increase eating speed.</description>
+		<iconPath>UI/Icons/Genes/AG_InsectoidMandiblesIcon</iconPath>
+		<selectionWeight>0</selectionWeight>
+		<graphicData>
+			<graphicPath>Things/Pawn/Humanlike/HeadAttachments/AG_InsectoidMandibles/AG_InsectoidMandibles</graphicPath>
+			<colorType>Skin</colorType>
+			<layer>PostHeadgear</layer>
+			<visibleNorth>false</visibleNorth>
+		</graphicData>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/AG_EndogenesInsect</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/AG_XenogenesInsect</backgroundPathXenogenes>
+				<hediffToWholeBody>AG_VFEI_Mandibles</hediffToWholeBody>
+			</li>
+		</modExtensions>
+	</GeneDef>
+</Defs>
