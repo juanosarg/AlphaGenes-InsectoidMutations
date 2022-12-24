@@ -1,0 +1,4 @@
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AlphaGenes-InsectoidMutations\1.4\Assemblies\AlphaGenesInsectoids.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AlphaGenes-InsectoidMutations\1.4\Source\AlphaGenesInsectoids\AlphaGenesInsectoids\obj\Debug\AlphaGenesInsectoids.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AlphaGenes-InsectoidMutations\1.4\Source\AlphaGenesInsectoids\AlphaGenesInsectoids\obj\Debug\AlphaGenesInsectoids.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AlphaGenes-InsectoidMutations\1.4\Source\AlphaGenesInsectoids\AlphaGenesInsectoids\obj\Debug\AlphaGenesInsectoids.dll

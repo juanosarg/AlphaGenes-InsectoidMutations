@@ -7,7 +7,7 @@
 		<iconPath>UI/Icons/Genes/AGI_InsectoidLeg</iconPath>
 		<biostatCpx>1</biostatCpx>
 		<displayCategory>AG_InsectoidMutations</displayCategory>
-		<biostatMet>-1</biostatMet>
+		<biostatMet>0</biostatMet>
 		<selectionWeight>0</selectionWeight>
 		<customEffectDescriptions>
 			<li>Implantation of a Drone genome on this person that would result in an insectoid leg will just fail.</li>
@@ -35,8 +35,12 @@
 		<iconPath>UI/Icons/Genes/AGI_InsectoidArm</iconPath>
 		<biostatCpx>1</biostatCpx>
 		<displayCategory>AG_InsectoidMutations</displayCategory>
-		<biostatMet>-1</biostatMet>
+		<biostatMet>0</biostatMet>
 		<selectionWeight>0</selectionWeight>
+		<exclusionTags>
+			<li>AG_InsectoidArms</li>
+
+		</exclusionTags>
 		<customEffectDescriptions>
 			<li>Implantation of a Drone genome on this person that would result in an insectoid arm will just fail.</li>
 		</customEffectDescriptions>
@@ -71,7 +75,7 @@
 			<li>EyeColor</li>
 		</exclusionTags>
 		<customEffectDescriptions>
-			<li>Implantation of a Drone genome on this person that would result in an insectoid eye will just fail.</li>
+			<li>Implantation of a Drone genome on this person that would result in a compound eye will just fail.</li>
 		</customEffectDescriptions>
 		<graphicData>
 			<drawScale>0.28</drawScale>
@@ -99,7 +103,7 @@
 		</modExtensions>
 	</GeneDef>
 	<GeneDef>
-		<defName>AG_InsectoidMandibles</defName>
+		<defName>AG_VFEI_InsectoidMandibles</defName>
 		<label>insectoid mandibles</label>
 		<displayCategory>AG_InsectoidMutations</displayCategory>
 		<biostatMet>-1</biostatMet>
@@ -111,7 +115,9 @@
 			<li>Tusks</li>
 			<li>AG_Tusks</li>
 		</exclusionTags>
-		
+		<customEffectDescriptions>
+			<li>Implantation of a Drone genome on this person that would result in mandibles will just fail.</li>
+		</customEffectDescriptions>
 		<randomChosen>true</randomChosen>
 		<description>Carriers of this gene sport a pair of appendages situated on the sides of the mouth, helping to crush and cut the food. Whilst it’s significantly less comfortable than normal jaw, insectoid mandibles significantly increase eating speed.</description>
 		<iconPath>UI/Icons/Genes/AG_InsectoidMandiblesIcon</iconPath>
@@ -122,11 +128,361 @@
 			<layer>PostHeadgear</layer>
 			<visibleNorth>false</visibleNorth>
 		</graphicData>
+		<beardTagFilter>
+			<whitelist>true</whitelist>
+			<tags>
+				<li>NoBeard</li>
+			</tags>
+		</beardTagFilter>
 		<modExtensions>
 			<li Class="VanillaGenesExpanded.GeneExtension">
 				<backgroundPathEndogenes>UI/Icons/Genes/AG_EndogenesInsect</backgroundPathEndogenes>
 				<backgroundPathXenogenes>UI/Icons/Genes/AG_XenogenesInsect</backgroundPathXenogenes>
-				<hediffToWholeBody>AG_VFEI_Mandibles</hediffToWholeBody>
+
+				<hediffsToBodyParts>
+					<li>
+						<hediff>AG_VFEI_Mandibles</hediff>
+						<bodyparts>
+							<li>Jaw</li>
+
+						</bodyparts>
+					</li>
+				</hediffsToBodyParts>
+			</li>
+		</modExtensions>
+	</GeneDef>
+
+	<GeneDef>
+		<defName>AG_VFEI_JellySac</defName>
+		<label>jelly sac</label>
+		<displayCategory>AG_InsectoidMutations</displayCategory>
+		<description>The carrier of this gene possesses a tube-like organ within the body. It allows humans to produce low quantities of insect jelly over time. It’s an extremely painful mutation, in some cases requiring medical enhancement for the person to actually live with it.</description>
+		<iconPath>UI/Icons/Genes/AGI_JellySac</iconPath>
+		<exclusionTags>
+			<li>AG_JellyProduction</li>
+
+		</exclusionTags>
+		<customEffectDescriptions>
+			<li>Implantation of a Drone genome on this person that would result in a jelly sac will just fail.</li>
+		</customEffectDescriptions>
+		<biostatMet>-1</biostatMet>
+		<biostatCpx>1</biostatCpx>
+
+		<selectionWeight>0</selectionWeight>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/AG_EndogenesInsect</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/AG_XenogenesInsect</backgroundPathXenogenes>
+
+				<hediffsToBodyParts>
+					<li>
+						<hediff>AG_VFEI_JellySac</hediff>
+						<bodyparts>
+							<li>Torso</li>
+
+						</bodyparts>
+					</li>
+				</hediffsToBodyParts>
+			</li>
+		</modExtensions>
+	</GeneDef>
+
+	<GeneDef>
+		<defName>AG_VFEI_VenomGland</defName>
+		<label>venom gland</label>
+		<description>Carriers of this gene grow a sack-like gland tucked under the tongue that secretes acid, liquifying and allowing to safely consume even the most dangerous foods. The overstimulation of this gland enables the user to throw a short range acid spitting attack, effective at going through armor.</description>
+		<iconPath>UI/Icons/Genes/AGI_VenomSac</iconPath>
+		<biostatCpx>1</biostatCpx>
+		<displayCategory>AG_InsectoidMutations</displayCategory>
+		<biostatMet>-2</biostatMet>
+		<selectionWeight>0</selectionWeight>
+		<customEffectDescriptions>
+			<li>Implantation of a Warrior genome on this person that would result in a venom gland will just fail.</li>
+			<li>Disables all thoughts from food ingestion.</li>
+		</customEffectDescriptions>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/AG_EndogenesInsect</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/AG_XenogenesInsect</backgroundPathXenogenes>
+				<hediffsToBodyParts>
+					<li>
+						<hediff>AG_VFEI_VenomGland</hediff>
+						<bodyparts>
+							<li>Jaw</li>
+
+						</bodyparts>
+					</li>
+				</hediffsToBodyParts>
+
+			</li>
+		</modExtensions>
+	</GeneDef>
+	<GeneDef>
+		<defName>AG_VFEI_PneumaticClaw</defName>
+		<label>pneumatic claw</label>
+		<description>Carriers of this gene have powerful pneumatic pincer arms, capable of repeatedly exerting great pressure on the target at the cost of refined motor skills.</description>
+		<iconPath>UI/Icons/Genes/AGI_PneumaticClaw</iconPath>
+		<biostatCpx>1</biostatCpx>
+		<displayCategory>AG_InsectoidMutations</displayCategory>
+		<biostatMet>0</biostatMet>
+		<selectionWeight>0</selectionWeight>
+		<exclusionTags>
+			<li>AG_InsectoidArms</li>
+
+		</exclusionTags>
+		<customEffectDescriptions>
+			<li>Implantation of a Warrior genome on this person that would result in a pneumatic claw will just fail.</li>
+		</customEffectDescriptions>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/AG_EndogenesInsect</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/AG_XenogenesInsect</backgroundPathXenogenes>
+				<hediffsToBodyParts>
+					<li>
+						<hediff>AG_VFEI_PneumaticClaw</hediff>
+						<bodyparts>
+							<li>Hand</li>
+							<li>Hand</li>
+						</bodyparts>
+					</li>
+				</hediffsToBodyParts>
+			</li>
+		</modExtensions>
+	</GeneDef>
+	<GeneDef>
+		<defName>AG_VFEI_AdrenalSecretors</defName>
+		<label>adrenal secretors</label>
+		<description>Carriers of this gene have insectoid kidneys with hyperactive adrenal glands. Subjects with this mutation may find newfound pleasure in inflicting pain. However, it does bring the side effect of unwarranted aggression.</description>
+		<iconPath>UI/Icons/Genes/AGI_AdrenalSecretor</iconPath>
+		<biostatCpx>1</biostatCpx>
+		<displayCategory>AG_InsectoidMutations</displayCategory>
+		<biostatMet>-1</biostatMet>
+		<selectionWeight>0</selectionWeight>
+
+		<customEffectDescriptions>
+			<li>Will gain recreation after killing someone.</li>
+		</customEffectDescriptions>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/AG_EndogenesInsect</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/AG_XenogenesInsect</backgroundPathXenogenes>
+				<hediffsToBodyParts>
+					<li>
+						<hediff>AG_VFEI_AdrenalSecretor</hediff>
+						<bodyparts>
+							<li>Kidney</li>
+							<li>Kidney</li>
+						</bodyparts>
+					</li>
+				</hediffsToBodyParts>
+			</li>
+		</modExtensions>
+	</GeneDef>
+	<GeneDef>
+		<defName>AG_VFEI_Antennae</defName>
+		<label>insectoid antennae</label>
+		<description>Carriers of this gene have slender, mobile sensory organs that serve to compliment vision and locational awareness. A subject with this mutation will no longer suffer from darkness penalties, however sensory overload makes it very difficult to socialize.</description>
+		<iconPath>UI/Icons/Genes/AGI_AntennaIcon</iconPath>
+		<biostatCpx>1</biostatCpx>
+		<displayCategory>AG_InsectoidMutations</displayCategory>
+		<biostatMet>-1</biostatMet>
+		<selectionWeight>0</selectionWeight>
+		<exclusionTags>
+			<li>Antennas</li>
+			<li>Antenna</li>
+			<li>AG_Antennae</li>
+		</exclusionTags>
+		<graphicData>
+			<layer>PostHeadgear</layer>
+			<drawLoc>HeadTop</drawLoc>
+			<colorType>Skin</colorType>
+			<graphicPath>Things/Pawn/Humanlike/HeadAttachments/AGI_Antenna/AGI_Antenna</graphicPath>
+
+		</graphicData>
+		<randomChosen>true</randomChosen>
+		<customEffectDescriptions>
+			<li>Implantation of a Warrior genome on this person that would result in an antenna will just fail.</li>
+			<li>Carrier is immune to any darkness effects.</li>
+		</customEffectDescriptions>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/AG_EndogenesInsect</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/AG_XenogenesInsect</backgroundPathXenogenes>
+				<hediffsToBodyParts>
+					<li>
+						<hediff>AG_VFEI_Antenna</hediff>
+						<bodyparts>
+							<li>Ear</li>
+							<li>Ear</li>
+						</bodyparts>
+					</li>
+				</hediffsToBodyParts>
+			</li>
+		</modExtensions>
+	</GeneDef>
+	<GeneDef>
+		<defName>AG_VFEI_PredatorStomach</defName>
+		<label>predator stomach</label>
+
+		<description>Carriers of this gene have a highly efficient, although basic stomach alternative. Subjects with this mutation will be able to live longer with less food.</description>
+		<iconPath>UI/Icons/Genes/AGI_PredatorStomach</iconPath>
+		<biostatCpx>1</biostatCpx>
+		<displayCategory>AG_InsectoidMutations</displayCategory>
+		<biostatMet>-1</biostatMet>
+		<selectionWeight>0</selectionWeight>
+		<exclusionTags>					
+			<li>AG_RobustDigestionAndPredatorStomach</li>
+			<li>AG_PredatorStomachAndWeakStomach</li>
+		</exclusionTags>
+		<customEffectDescriptions>
+			<li>Implantation of a Warrior genome on this person that would result in a predator stomach will just fail.</li>
+			<li>+10% nutrition gained from NON-raw foods.</li>
+		</customEffectDescriptions>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/AG_EndogenesInsect</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/AG_XenogenesInsect</backgroundPathXenogenes>
+				<hediffsToBodyParts>
+					<li>
+						<hediff>AG_VFEI_PredatorStomach</hediff>
+						<bodyparts>
+							<li>Stomach</li>
+
+						</bodyparts>
+					</li>
+				</hediffsToBodyParts>
+			</li>
+		</modExtensions>
+	</GeneDef>
+	<GeneDef>
+		<defName>AG_VFEI_PheromoneSecretor</defName>
+		<label>pheromone secretor</label>
+
+		<description>Carriers of this gene have insectoid glands that slowly leak colorless, odorless, but sticky pheromone, notable for inducing a mild euphoria in those nearby.</description>
+		<iconPath>UI/Icons/Genes/AGI_PheromonalSecretor</iconPath>
+		<biostatCpx>1</biostatCpx>
+		<displayCategory>AG_InsectoidMutations</displayCategory>
+		<biostatMet>-1</biostatMet>
+		<selectionWeight>0</selectionWeight>
+
+		<customEffectDescriptions>
+			<li>Implantation of a Royal genome on this person that would result in a pheromone secretor will just fail.</li>
+
+		</customEffectDescriptions>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/AG_EndogenesInsect</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/AG_XenogenesInsect</backgroundPathXenogenes>
+				<hediffsToBodyParts>
+					<li>
+						<hediff>AG_VFEI_PheromoneSecretor</hediff>
+						<bodyparts>
+							<li>Neck</li>
+
+						</bodyparts>
+					</li>
+				</hediffsToBodyParts>
+			</li>
+		</modExtensions>
+	</GeneDef>
+	<GeneDef>
+		<defName>AG_VFEI_VentricularSleeve</defName>
+		<label>ventricular sleeve</label>
+
+		<description>Carriers of this gene posses a heart and artery mutation that causes blood to coagulate into oxygen-rich gel-like material. Upon laceration or even loss of limbs, the gel will cauterize the wound immediately. Unfortunately puts heavy strain on human cardiovascular biology.</description>
+		<iconPath>UI/Icons/Genes/AGI_VentricularSleeve</iconPath>
+		<biostatCpx>1</biostatCpx>
+		<displayCategory>AG_InsectoidMutations</displayCategory>
+		<biostatMet>-3</biostatMet>
+		<selectionWeight>0</selectionWeight>
+		<exclusionTags>
+			<li>WoundHealingRate</li>
+		</exclusionTags>
+		<customEffectDescriptions>
+			<li>Implantation of a Royal genome on this person that would result in a ventricular sleeve will just fail.</li>
+
+		</customEffectDescriptions>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/AG_EndogenesInsect</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/AG_XenogenesInsect</backgroundPathXenogenes>
+				<hediffsToBodyParts>
+					<li>
+						<hediff>AG_VFEI_VentricularSleeve</hediff>
+						<bodyparts>
+							<li>Heart</li>
+
+						</bodyparts>
+					</li>
+				</hediffsToBodyParts>
+			</li>
+		</modExtensions>
+	</GeneDef>
+	<GeneDef>
+		<defName>AG_VFEI_SynapticCerebellum</defName>
+		<label>synaptic cerebellum</label>
+
+		<description>Carriers of this gene posses an insectoid brain particularly sensitive to residual psychic synapse. A creature with this mutation possesses profound collective thought and psychic sensitivity, however is barely able to form cohesive sentences.</description>
+		<iconPath>UI/Icons/Genes/AGI_SynapticCerebellum</iconPath>
+		<biostatCpx>1</biostatCpx>
+		<displayCategory>AG_InsectoidMutations</displayCategory>
+		<biostatMet>-1</biostatMet>
+		<selectionWeight>0</selectionWeight>
+
+		<customEffectDescriptions>
+			<li>Implantation of a Royal genome on this person that would result in a synaptic cerebellum will just fail.</li>
+			<li>Due to the way the synaptic cerebellum implant is coded, you can acquire this gene as an implant by removing it, which is an exploit. So dont. Or do, I'm not your mother.</li>
+		</customEffectDescriptions>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/AG_EndogenesInsect</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/AG_XenogenesInsect</backgroundPathXenogenes>
+				<hediffsToBodyParts>
+					<li>
+						<hediff>VFEI_SynapticCerebellum</hediff>
+						<bodyparts>
+							<li>Brain</li>
+
+						</bodyparts>
+					</li>
+				</hediffsToBodyParts>
+			</li>
+		</modExtensions>
+	</GeneDef>
+
+	<GeneDef ParentName="GeneSkinColorOverride">
+		<defName>AG_VFEI_VatGrownInsectoidSkin</defName>
+		<displayCategory>AG_InsectoidMutations</displayCategory>
+		<label>vat-grown insectoid skin</label>
+		<labelShortAdj>insect</labelShortAdj>
+		<description>Carriers of this gene produce a pigment similar to that of vat-grown insectoids.</description>
+		<randomBrightnessFactor>0</randomBrightnessFactor>
+		<skinColorOverride>(150, 144, 126)</skinColorOverride>
+		<selectionWeight>0</selectionWeight>
+		<displayOrderInCategory>-10</displayOrderInCategory>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/AG_EndogenesInsect</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/AG_XenogenesInsect</backgroundPathXenogenes>
+				
+			</li>
+		</modExtensions>
+	</GeneDef>
+	<GeneDef ParentName="GeneSkinColorOverride">
+		<defName>AG_VFEI_InsectoidSkin</defName>
+		<displayCategory>AG_InsectoidMutations</displayCategory>
+		<label>insectoid skin</label>
+		<labelShortAdj>insect</labelShortAdj>
+		<description>Carriers of this gene produce a pigment similar to that of insectoids.</description>
+		<randomBrightnessFactor>0</randomBrightnessFactor>
+		<skinColorOverride>(165, 132, 106)</skinColorOverride>
+		<selectionWeight>0</selectionWeight>
+		<displayOrderInCategory>-9</displayOrderInCategory>
+		<modExtensions>
+			<li Class="VanillaGenesExpanded.GeneExtension">
+				<backgroundPathEndogenes>UI/Icons/Genes/AG_EndogenesInsect</backgroundPathEndogenes>
+				<backgroundPathXenogenes>UI/Icons/Genes/AG_XenogenesInsect</backgroundPathXenogenes>
+				
 			</li>
 		</modExtensions>
 	</GeneDef>
